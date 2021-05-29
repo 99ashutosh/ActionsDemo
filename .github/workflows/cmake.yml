@@ -24,6 +24,9 @@ jobs:
     - name: Check pkg-config
       run: pkg-config gtk+-3.0 --cflags
     - uses: actions/checkout@v2
+    
+    - name: Change flags
+      run: cp  ${{github.workspace}}/flags.make /home/runner/work/ActionsDemo/ActionsDemo/CMakeFiles/ActionsDemo.dir/flags.make
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
@@ -32,8 +35,7 @@ jobs:
 
     - name: Build
       # Build your program with the given configuration
-      run: cp  ${{github.workspace}}/flags.make /home/runner/work/ActionsDemo/ActionsDemo/CMakeFiles/ActionsDemo.dir/flags.make
-          cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} -C_DEFINES=-rdynamic
+      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} -C_DEFINES=-rdynamic
 
     - name: Test
       working-directory: ${{github.workspace}}/build
