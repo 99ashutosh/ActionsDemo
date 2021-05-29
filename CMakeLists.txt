@@ -20,5 +20,5 @@ target_compile_definitions(ActionsDemo PRIVATE ${GTK+_CFLAGS_OTHER})
 
 # Setup CMake to use GTK+, tell the compiler where to look for headers
 # and to the linker where to look for libraries
-target_include_directories(ActionsDemo PRIVATE ${GTK+_INCLUDE_DIRS})
-target_link_directories(ActionsDemo PRIVATE ${GTK+_LIBRARY_DIRS})
+target_include_directories(ActionsDemo PRIVATE ${GTK+_INCLUDE_DIR})
+target_link_directories(ActionsDemo PRIVATE ${GTK+_LIBRARY_DIR})
