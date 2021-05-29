@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install Dependencies
+      run: sudo apt-get install build-essential libgtk-3-dev 
     - uses: actions/checkout@v2
 
     - name: Configure CMake
