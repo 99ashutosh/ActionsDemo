@@ -1,4 +1,4 @@
-#include <gtk-3.0/gtk/gtk.h>
+#include <gtk/gtk.h>
 
 GtkWidget  *g_notebook_widget;
 GtkWidget  *g_btn_login;
