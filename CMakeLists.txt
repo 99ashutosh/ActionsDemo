@@ -1,4 +1,4 @@
-﻿# CMakeList.txt : Top-level CMake project file, do global configuration
+# CMakeList.txt : Top-level CMake project file, do global configuration
 # and include sub-projects here.
 #
 cmake_minimum_required (VERSION 3.8)
@@ -6,6 +6,8 @@ cmake_minimum_required (VERSION 3.8)
 project ("ActionsDemo")
 
 # Include sub-projects.
+
+add_executable(ActionsDemo gui.c)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK REQUIRED gtk+-3.0)
