@@ -36,7 +36,7 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
     - uses: actions/upload-artifact@v2
       with:
-        path: build/*
+        path: /home/runner/work/ActionsDemo/ActionsDemo/
    # - name: Test
    #   working-directory: ${{github.workspace}}/build
    #   # Execute tests defined by the CMake configuration.  
