@@ -32,6 +32,10 @@ jobs:
     - name: Build
       # Build your program with the given configuration
       run: cmake --build ${{github.workspace}}/build --config RelWithDebInfo
+      
+      - name: Publish
+        uses: skx/github-action-publish-binaries@release-0.15
+
 
    # - name: Test
    #   working-directory: ${{github.workspace}}/build
