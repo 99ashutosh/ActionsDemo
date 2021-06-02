@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 
-project ("ActionsDemo" C)
+project ("ActionsDemo")
 
 # Include sub-projects.
 
@@ -21,5 +21,5 @@ target_link_libraries(ActionsDemo PRIVATE ${GTK_LIBRARIES})
 
 # Setup CMake to use GTK+, tell the compiler where to look for headers
 # and to the linker where to look for libraries
-target_include_directories(ActionsDemo PRIVATE ${GTK_INCLUDE_DIR})
-target_link_directories(ActionsDemo PRIVATE ${GTK_LIBRARY_DIR})
+target_include_directories(ActionsDemo PRIVATE ${GTK_INCLUDE_DIRS})
+target_link_directories(ActionsDemo PRIVATE ${GTK_LIBRARY_DIRS})
