@@ -29,12 +29,9 @@ jobs:
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} 
       
-    - name: Change flags
-      run: cp  ${{github.workspace}}/flags.make /home/runner/work/ActionsDemo/ActionsDemo/CMakeFiles/ActionsDemo.dir/flags.make
-      
     - name: Build
       # Build your program with the given configuration
-      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} -C_DEFINES=-rdynamic
+      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} 
 
     - name: Test
       working-directory: ${{github.workspace}}/build
