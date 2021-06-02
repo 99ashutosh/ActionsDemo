@@ -8,7 +8,7 @@ project ("ActionsDemo" C)
 
 # Include sub-projects.
 
-add_executable(ActionsDemo.exe hello.c)
+add_executable(ActionsDemo gui.c)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTK REQUIRED gtk+-3.0)
