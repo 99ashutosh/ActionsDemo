@@ -20,8 +20,10 @@ jobs:
 
     steps:
     - name: Install Dependencies
-      run: sudo apt-get install build-essential libgtk-3-dev && ninja
-      
+      run: sudo apt-get install build-essential libgtk-3-dev ninja-build
+    
+    - name: Check build system
+      run: ninja
     - uses: actions/checkout@v2
     
     - name: Configure CMake
