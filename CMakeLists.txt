@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("ActionsDemo")
+project ("ActionsDemo" C)
 
 # Include sub-projects.
 
